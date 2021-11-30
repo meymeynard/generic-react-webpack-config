@@ -1,4 +1,5 @@
 const path = require("path")
+const webpack = require("webpack")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 
 module.exports = ({ mode } = { mode: "production" }) => {
@@ -32,9 +33,11 @@ module.exports = ({ mode } = { mode: "production" }) => {
     plugins: [
       new HtmlWebpackPlugin({
         template: "./public/index.html"
-      })
+      }),
+      new webpack.HotModuleReplacementPlugin()
     ],
     devServer: {
+      hot: true,
       open: true
     }
   }
