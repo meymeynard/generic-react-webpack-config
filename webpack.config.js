@@ -1,6 +1,8 @@
 const path = require("path")
 const webpack = require("webpack")
+const { merge } = require("webpack-merge")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
+const modeConfig = env => require(`./build-utils/webpack.${env}`)(env)
 
 module.exports = ({ mode } = { mode: "production" }) => {
   console.log(`mode is ${mode}`)
@@ -40,5 +42,6 @@ module.exports = ({ mode } = { mode: "production" }) => {
       hot: true,
       open: true
     }
-  }
+  },
+  modeConfig(mode)
 }
