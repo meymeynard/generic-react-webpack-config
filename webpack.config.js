@@ -22,7 +22,10 @@ module.exports = ({ mode } = { mode: "production" }) => {
         {
           test: /\.(js|jsx)$/,
           exclude: /node_modules/,
-          loader: "babel-loader"
+          loader: "babel-loader",
+          options: {
+            cacheDirectory: true
+          }
         }
       ]
     },
