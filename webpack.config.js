@@ -33,6 +33,9 @@ module.exports = ({ mode } = { mode: "production" }) => {
       new HtmlWebpackPlugin({
         template: "./public/index.html"
       })
-    ]
+    ],
+    devServer: {
+      open: true
+    }
   }
 }
