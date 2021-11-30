@@ -1,6 +1,7 @@
 // build_utils/webpack.production.js
 
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+
 module.exports = () => ({
   output: {
     filename: "production.js",

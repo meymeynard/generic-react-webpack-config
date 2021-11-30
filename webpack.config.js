@@ -7,7 +7,7 @@ const modeConfig = env => require(`./build-utils/webpack.${env}`)(env)
 module.exports = ({ mode } = { mode: "production" }) => {
   console.log(`mode is ${mode}`)
 
-  return {
+  return merge({
     mode,
     entry: "./src/index.js",
     output: {
@@ -43,5 +43,5 @@ module.exports = ({ mode } = { mode: "production" }) => {
       open: true
     }
   },
-  modeConfig(mode)
+  modeConfig(mode))
 }
