@@ -9,7 +9,7 @@ module.exports = ({ mode } = { mode: "production" }) => {
     entry: "./src/index.js",
     output: {
       publicPath: "/",
-      path: path.resolve(__dirname__, "build"),
+      path: path.resolve(__dirname, "build"),
       filename: "bundled.js"
     },
     module: {
