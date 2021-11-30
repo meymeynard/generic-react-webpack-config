@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { hot } from "react-hot-loader"
 
 function App() {
   const [counter, setCounter] = useState(0)
@@ -16,4 +17,4 @@ function App() {
   );
 }
 
-export default App;
+export default hot(module)(App);
